@@ -124,7 +124,6 @@ class SeleniumHelper:
             details_container = self.driver.find_elements(By.CSS_SELECTOR, '.sus-unit-space-details')
             
             for detail in details_container:
-                self.scroll_element_into_view(detail)
                 values = detail.find_elements(By.CSS_SELECTOR, '.value')
                 
                 unit_spaces = detail.find_elements(By.CSS_SELECTOR, '.value')
@@ -141,7 +140,6 @@ class SeleniumHelper:
                 }
                 data.append(data_dict)
             
-            print(data)
             
             return data
 
